@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Atendimento</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css"/>
+    <link rel="icon" href="img/icon.png" type="image/x-icon"/>
+</head>
+<body>
+    <img src="img/correios.png" alt="Logo dos Correios"/>
+    <h1>Triagem de Atendimento</h1>
+    <main>
+        <h2>Cadastrar Cliente</h2>
+        <label>
+            Nome:
+            <input type="text" id="txtnome" maxlength="40">
+        </label>
+        <br>
+        <label>
+            Idade:
+            <input type="number" id="txtidade" min="1" max="120">
+        </label><br>
+
+        <input type="button" value="Cadastrar Atendimento" id="btn">
+
+        <div id="res"></div>
+
+        <hr>
+
+        <h2>Consultar Cliente</h2>
+        <input type="text" id="txtbusca" placeholder="Nome ou senha">
+        <input type="button" value="Pesquisar" id="btnbuscar">
+
+        <div id="resultadoBusca"></div>
+
+        <hr>
+
+        <h2>Estatísticas</h2>
+        <div id="estatisticas"></div>
+
+        <hr>
+
+        <h2>Fila de Atendimento</h2>
+        <div id="listaAtendimentos"></div>
+
+        <input type="button" value="Limpar Fila" id="btnlimpar">
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
