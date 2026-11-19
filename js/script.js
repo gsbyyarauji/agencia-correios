@@ -1,10 +1,10 @@
 let atendimentos = [];
 const botao = document.getElementById('btn');
-const nome = documemt.getElementById('txtnome');
+const nome = document.getElementById('txtnome');
 const idade = document.getElementById('txtidade');
 const res = document.getElementById('res');
 const lista = document.getElementById('listaAtendimentos');
-const busca = documemt.getElementById('txtbusca');
+const busca = document.getElementById('txtbusca');
 const resultadoBusca = document.getElementById('resultadoBusca');
 const estatisticas = document.getElementById('estatistica');
 let contador = 0;
@@ -12,11 +12,11 @@ let contador = 0;
 botao.addEventListener('click', processar);
 // document.getElementById('btnbuscar')
 //  .addEventListener('click', pesquisar);
- documemt.getElementById('btnlimpar')
+ document.getElementById('btnlimpar')
  .addEventListener('click', limparfila);
 
  function processar() {
-    let n = nome.value.trim().ToUpperCase();
+    let n = nome.value.trim().toUpperCase();
     let i = Number(idade.value);
     
     if(n ===''|| idade.value === ''){
@@ -37,12 +37,13 @@ botao.addEventListener('click', processar);
 
     let senha = 'A-' + String(contador).padStart(3, '0');
 
-    let Cliente ={
+    let cliente ={
         nome: n,
         idade: i,
         senha: senha,
         classe: classe
     };
+
     atendimentos.push(cliente);
 
     res.innerHTML = `
@@ -62,13 +63,13 @@ botao.addEventListener('click', processar);
 
     function exibirEstatisticas(){
 
-        let prioritarios = atendimento.filter(
+        let prioritarios = atendimentos.filter(
             cliente => cliente.idade >= 60
         );
-
+        
         estatisticas.innerHTML = `
-        Total de clientes: ${atendimentos.length}<br>
-        Clientes prioritarios: ${Prioritarios.length}
+            Total de clientes: ${atendimentos.length}<br>
+            Clientes prioritarios: ${prioritarios.length}
         `;
     }
 
