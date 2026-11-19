@@ -23,7 +23,7 @@ document.getElementById('btnbuscar')
         res.textContent = 'Preencha todos os campos';
         return;
     }
-    if(!Number.isInteger(i) || i < i || i > 120) {
+    if(!Number.isInteger(i) || 1 < 1 || i > 120) {
         res.textContent = 'idade invalida';
         return;
     }
@@ -33,3 +33,7 @@ document.getElementById('btnbuscar')
     }
     let classe = classficar(i);
  }
+    contador++;
+
+    let senha = 'A-' + String(        )
+ 
