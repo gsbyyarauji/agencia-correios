@@ -32,8 +32,33 @@ document.getElementById('btnbuscar')
         return;
     }
     let classe = classficar(i);
- }
-    contador++;
 
-    let senha = 'A-' + String(        )
+     contador++;
+
+    let senha = 'A-' + String(contador).padStart(3, '0');
+
+    let Cliente ={
+        nome: n,
+        idade: i,
+        senha: senha,
+        classe: classe
+    };
+ }
+   
+
+ function classficar(idade){
+    if (idade <18){
+        return'Menor de idade';
+    }
+    else if (idade < 60){
+        return'Comun';
+    }
+    else if(idade <80){
+        return 'Prioritario';
+    }
+    else{
+        return 'Especial';
+    }
+
+ }
  
